@@ -66,19 +66,30 @@
     </style>
 </head>
 <body>
-    <audio controls>
-        <source src="POUR ELLE.mp3" type="audio/mp3"> <!-- Ensure MP3 file is correctly referenced -->
-    </audio>
-    
+
+
+
+
+<body>
     <h1>Hey Love, I'm Sorry!</h1>
-    <img src="heart.png" alt="Heart"> <!-- Correct path to image -->
-    <p>Click the button to see my message.</p>
-    <button onclick="showMessage()">Click Me</button>
+    <img src="heart.png" alt="Heart">
+    <p>Click the button to hear my apology and see my message.</p>
+    <button onclick="playAudio()">Click Me to Hear the Apology</button>
+    <button onclick="showMessage()">Click Me to See My Message</button>
     <p id="message">HBIBA DYALI, I’m truly sorry for what happened yesterday between us. I promise to be better, grow with you, and fix whatever happens between US. ❤️</p>
     <button onclick="revealSurprise()">Surprise Me!</button>
     <p id="surpriseMessage" style="display:none;">I’m so grateful to have you in my life. Let’s make more beautiful memories together! ❤️</p>
 
+    <audio id="myAudio">
+        <source src="POUR ELLE.mp3" type="audio/mp3">
+    </audio>
+
     <script>
+        function playAudio() {
+            var audio = document.getElementById('myAudio');
+            audio.play();
+        }
+
         function showMessage() {
             document.getElementById('message').style.display = 'block';
         }
@@ -86,6 +97,7 @@
         function revealSurprise() {
             document.getElementById('surpriseMessage').style.display = 'block';
         }
+
     </script>
 </body>
 </html>
