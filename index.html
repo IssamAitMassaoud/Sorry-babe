@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry</title>
+    <style>
+        /* Full-Screen Background Image */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ff4d4d;
+            margin-top: 50px;
+        }
+
+        img {
+            width: 300px; /* Adjust image size */
+            margin-top: 20px;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e60000;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: white;
+            display: none;
+        }
+
+        /* Floating Bubbles Animation */
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        #surpriseMessage {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="POUR ELLE.mp3" type="audio/mp3"> <!-- Ensure MP3 file is correctly referenced -->
+    </audio>
+    
+    <h1>Hey Love, I'm Sorry!</h1>
+    <img src="heart.png" alt="Heart"> <!-- Correct path to image -->
+    <p>Click the button to see my message.</p>
+    <button onclick="showMessage()">Click Me</button>
+    <p id="message">HBIBA DYALI, I’m truly sorry for what happened yesterday between us. I promise to be better, grow with you, and fix whatever happens between US. ❤️</p>
+    <button onclick="revealSurprise()">Surprise Me!</button>
+    <p id="surpriseMessage" style="display:none;">I’m so grateful to have you in my life. Let’s make more beautiful memories together! ❤️</p>
+
+    <script>
+        function showMessage() {
+            document.getElementById('message').style.display = 'block';
+        }
+
+        function revealSurprise() {
+            document.getElementById('surpriseMessage').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
